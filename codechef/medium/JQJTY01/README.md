@@ -73,7 +73,7 @@ Sum of minimums = `10000`
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-14T08:32:23.974Z  
+**Submitted:** 2026-07-14T08:32:34.965Z  
 
 ```java
     public static int calculateSumOfSubarrayMinimums(int[] inputArray) {
