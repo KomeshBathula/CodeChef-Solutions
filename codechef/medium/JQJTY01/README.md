@@ -70,12 +70,12 @@ Sum of minimums = `10000`
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-14T08:32:34.965Z  
+**Submitted:** 2026-07-14T08:34:46.044Z  
 
-```java
+```cpp
     public static int calculateSumOfSubarrayMinimums(int[] inputArray) {
         int sum = 0;
         int n = inputArray.length;
