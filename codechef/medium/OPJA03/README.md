@@ -4,39 +4,60 @@
 
 ## Problem
 
-_Description not available._
+### Create Student Class
+
+You are given a class Student having attributes as name and age and a display method to print name and age of Student. Create a object of student class with given name and age. Use display method to print information of the Student.
+
+### Input Format
+
+The first line of input will contain a string and integer representing name and age respectively.
+
+### Output Format
+
+Use display method to print the name and age of Student.
+
+### Sample 1:
+Input
+Output
+
+```
+Alice 45
+```
+
+```
+Alice 45
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-23T08:50:55.809Z  
+**Submitted:** 2026-07-23T08:52:47.655Z  
 
 ```java
-// Step 1: Define the class
-class MyClass {
-    // Step 2: Declare private members (fields)
-    private int privateValue;
+import java.util.Scanner;
 
-    // Step 3: Declare public members (fields and methods)
-    public int publicValue;
+class Student {
+    public String name;
+    public int age;
 
-    public void publicFunction() {
-        // Your code for the public function goes here
+    public void display() {
+        System.out.println(name + " " + age);
     }
 }
 
 class Codechef {
     public static void main(String[] args) {
-        // Step 4: Create an object of the class
-        MyClass obj = new MyClass();
+        Student s = new Student();
+        Scanner scanner = new Scanner(System.in);
 
-        // Step 5: Accessing and changing the object's public data
-        obj.publicValue = 10;
+        s.name = scanner.next();
+        s.age = scanner.nextInt();
 
-        // Step 6: Use the object's public methods
-        obj.publicFunction();
+        s.display();
+
+        scanner.close();
     }
 }
 
