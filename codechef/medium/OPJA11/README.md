@@ -4,40 +4,66 @@
 
 ## Problem
 
-_Description not available._
+### Rectangle Class
+
+Write a class Rectangle with length and breadth as attribute and area and perimeter as methods. Given length and breadth as input, Print area and perimeter of rectangle using area and perimeter methods respectively.
+
+### Input Format
+- The first line of input contains length of rectangle.
+- The second line of input contains breadth of rectangle.
+### Output Format
+- First line contains the output of area method of Rectangle.
+- Second line contains the output of perimeter method of Rectangle.
+### Sample 1:
+Input
+Output
+
+```
+2 
+3
+```
+
+```
+6
+10
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-23T09:02:15.672Z  
+**Submitted:** 2026-07-23T09:03:19.141Z  
 
 ```java
-class Student {
-    public String name;
-    public int score;
-    public int age;
+import java.util.Scanner;
 
-    public void eligible() {
-        // Update your code below this line
-        if (score > 10) 
-            System.out.println("YES");
-        else 
-            System.out.println("NO");
+class Rectangle {
+    public int length;
+    public int breadth;
+
+    public void area() {
+        System.out.println(length * breadth);
+    }
+
+    public void perimeter() {
+        System.out.println(2 * (length + breadth));
     }
 }
 
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		Student obj = new Student();
-        obj.name = "Tom";
-        obj.score = 15;
-        obj.age = 21;
-        obj.eligible();
-	}
+class Codechef {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Rectangle r = new Rectangle();
+
+        r.length = scanner.nextInt();
+        r.breadth = scanner.nextInt();
+
+        r.area();
+        r.perimeter();
+        
+        scanner.close();
+    }
 }
 
 ```
