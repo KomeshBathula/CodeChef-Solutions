@@ -1,25 +1,29 @@
-class Student {
-    public String name;
-    public int score;
-    public int age;
+import java.util.Scanner;
 
-    public void eligible() {
-        // Update your code below this line
-        if (score > 10) 
-            System.out.println("YES");
-        else 
-            System.out.println("NO");
+class Rectangle {
+    public int length;
+    public int breadth;
+
+    public void area() {
+        System.out.println(length * breadth);
+    }
+
+    public void perimeter() {
+        System.out.println(2 * (length + breadth));
     }
 }
 
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		Student obj = new Student();
-        obj.name = "Tom";
-        obj.score = 15;
-        obj.age = 21;
-        obj.eligible();
-	}
+class Codechef {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Rectangle r = new Rectangle();
+
+        r.length = scanner.nextInt();
+        r.breadth = scanner.nextInt();
+
+        r.area();
+        r.perimeter();
+        
+        scanner.close();
+    }
 }
