@@ -1,30 +1,23 @@
-import java.util.Scanner;
+class Car {
+    public String carName;
 
-class Student {
-    public String name;
-    public int age;
-
-    public Student(String name, int age) {
-        this.name = name;
-        this.age = age;
+    // Parameterized constructor
+    public Car(String carName) {
+        this.carName = carName;
     }
 
-    public void display() {
-        System.out.println(name);
-        System.out.println(age);
+    // Copy constructor (constructor that takes an object of the same class)
+    public Car(Car c) {
+        this.carName = c.carName;
     }
 }
 
 class Codechef {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Car originalCar = new Car("Beat"); // Parameterized constructor called here
+        System.out.println(originalCar.carName);
 
-        String name = scanner.next();
-        int age = scanner.nextInt();
-
-        Student obj = new Student(name, age);
-        obj.display();
-
-        scanner.close();
+        Car copiedCar = new Car(originalCar); // Copy constructor called here
+        System.out.println(copiedCar.carName);
     }
 }
