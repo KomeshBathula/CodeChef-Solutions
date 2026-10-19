@@ -58,28 +58,30 @@ Since our CodeChef domain itself is a little long, the generated short URLs you 
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T17:14:22.459Z  
+**Submitted:** 2026-10-19T17:14:54.224Z  
 
 ```cpp
-    // Method: To Shorten URL
-    public String shortenUrl(String originalUrl) {
-        String fullHash = DigestUtils.md5DigestAsHex(originalUrl.getBytes());
-        String shortCode = fullHash.substring(0, 6);
+package com.example.demo.model;
 
-        if (!urlRepository.exists(shortCode)) {
-            urlRepository.saveUrl(shortCode, originalUrl);
-        }
-        return shortCode;
+public class UrlRequest {
+    private String originalUrl;
+    
+    // Needed to convert JSON to Object
+    public UrlRequest() {}
+
+    // PARAMETERIZED CONSTRUCTOR
+    public UrlRequest(String originalUrl) {
+        this.originalUrl = originalUrl;
     }
 
-    // Method: To Retrieve Original URL
-    public String getOriginalUrl(String shortCode) {
-        return urlRepository.getOriginalUrl(shortCode);
+    // Getters and Setters
+    public String getOriginalUrl() {
+        return originalUrl;
     }
-}
 
-
-
+    public void setOriginalUrl(String originalUrl) {
+        this.originalUrl = originalUrl;
+    }
 ```
 
 ---
