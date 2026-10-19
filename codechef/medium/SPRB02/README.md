@@ -58,30 +58,30 @@ Since our CodeChef domain itself is a little long, the generated short URLs you 
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T17:16:23.739Z  
+**Submitted:** 2026-10-19T17:15:05.220Z  
 
 ```cpp
-    public UrlController(UrlService urlService) {
-        this.urlService = urlService;
+package com.example.demo.model;
+
+public class UrlRequest {
+    private String originalUrl;
+    
+    // Needed to convert JSON to Object
+    public UrlRequest() {}
+
+    // PARAMETERIZED CONSTRUCTOR
+    public UrlRequest(String originalUrl) {
+        this.originalUrl = originalUrl;
     }
 
-    // POST: Create Short URL
-    @PostMapping("/api/shorten")
-
-    // Constructor Injection
-    public ResponseEntity<Map<String, String>> shortenUrl(@RequestBody UrlRequest request) {
-
-        // Generate Short Code
-        String shortCode = urlService.shortenUrl(request.getOriginalUrl());
-        
-        // Return the short code in the response body as JSON
-        // Returning JSON: { "shortCode": "5d4140" }
-        return ResponseEntity.ok(Collections.singletonMap("shortCode", shortCode));
+    // Getters and Setters
+    public String getOriginalUrl() {
+        return originalUrl;
     }
 
-    // GET: Redirect to Original URL
-    @GetMapping("/{shortCode}")
-    public ResponseEntity<Void> redirectToOriginal(@PathVariable String shortCode) {
+    public void setOriginalUrl(String originalUrl) {
+        this.originalUrl = originalUrl;
+    }
 ```
 
 ---
